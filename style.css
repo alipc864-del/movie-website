@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #08080d;
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    padding: 30px 7%;
+    text-align: center;
+    background: #101018;
+    border-bottom: 1px solid #292938;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 500px;
+    padding: 14px 20px;
+    border: 1px solid #3b3b4f;
+    border-radius: 30px;
+    outline: none;
+    background: #181820;
+    color: white;
+    font-size: 16px;
+}
+
+#searchInput:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 15px #8b5cf6;
+}
+
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    padding: 50px 7%;
+    background:
+        linear-gradient(90deg, #08080d 20%, rgba(8, 8, 13, 0.7), rgba(8, 8, 13, 0.2)),
+        url("https://picsum.photos/1400/600?random=10") center/cover;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero-content span {
+    color: #a78bfa;
+    font-weight: bold;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.hero-content p {
+    color: #c4c4cc;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+#watchBtn {
+    padding: 13px 24px;
+    border: none;
+    border-radius: 25px;
+    background: #8b5cf6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#watchBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #8b5cf6;
+}
+
+.movies {
+    padding: 50px 7%;
+}
+
+.movies > h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.movie-card {
+    background: #12121a;
+    border: 1px solid #252532;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+    border-color: #8b5cf6;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.35);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    display: block;
+}
+
+.movie-info {
+    padding: 18px;
+}
+
+.movie-info h3 {
+    margin-bottom: 10px;
+}
+
+.movie-info span {
+    color: #facc15;
+    font-size: 14px;
+}
+
+.movie-info p {
+    color: #999;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content h2 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 550px) {
+    header {
+        padding: 25px 5%;
+    }
+
+    .hero {
+        padding: 40px 5%;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .movies {
+        padding: 35px 5%;
+    }
+
+    .movie-grid {
+        grid-template-columns: 1fr;
+    }
+}
